@@ -1,0 +1,15 @@
+{
+	"name": "気圧の中心位置",
+	"description": "気圧の位置、台風つき",
+	"filters": [
+		{
+			"key": "vpcy50.foctors",
+			"id" : "typhoon"
+		}
+	],
+	"urls": {
+		"mqtt": {
+			"topic": "Weatherfilter/centers"
+		}
+	}
+}

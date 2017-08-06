@@ -1,0 +1,25 @@
+{
+  "name": "weatherfilter-format",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "opendata",
+    "xml",
+    "json"
+  ],
+  "author": "Takayuki Hagiwra",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "xml2js": "^0.4.17",
+    "xml2js-xpath": "^0.8.0"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "mocha": "^3.5.0"
+  }
+}

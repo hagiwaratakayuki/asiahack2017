@@ -1,0 +1,22 @@
+{
+  "name": "weatherfilter_ja_ma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "waether",
+    "opendata"
+  ],
+  "author": "Takayuki Hagiwara",
+  "license": "MIT",
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "mocha": "^3.5.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}

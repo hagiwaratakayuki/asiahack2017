@@ -1,0 +1,53 @@
+<head>
+  <meta charset="utf-8">
+
+  <title>動いています</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+
+</head>
+
+<body>
+  <script src="js/paho-mqtt-min.js"></script>
+  <script>
+  // Create a client instance
+  client = new Paho.MQTT.Client('ws://52.192.31.73:1895/',1895,'waetherfilter','');
+
+  // set callback handlers
+  client.onConnectionLost = onConnectionLost;
+  client.onMessageArrived = onMessageArrived;
+
+  // connect the client
+  client.connect({hosts:['ws://52.192.31.73:1895/'], onSuccess:onConnect,userName:'hackuser', password:'hackuser'});
+
+
+  // called when the client connects
+  function onConnect() {
+    // Once a connection has been made, make a subscription and send a message.
+    console.log("onConnect");
+
+    client.subscribe("Weather/JP/#");
+    /*
+    message = new Paho.MQTT.Message("Hello");
+    message.destinationName = "World";
+    client.send(message);
+    */
+  }
+
+  // called when the client loses its connection
+  function onConnectionLost(responseObject) {
+    if (responseObject.errorCode !== 0) {
+      console.log("onConnectionLost:"+responseObject.errorMessage);
+    }
+  }
+
+  // called when a message arrives
+  function onMessageArrived(message) {
+    console.log("onMessageArrived:"+message.payloadString);
+  }
+  </script>
+</body>
+</html>

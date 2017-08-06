@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 80%;
+        width: 80%;
+        margin-left: 10%;
+
+      }
+      #controll{
+        width: 100%;
+        margin-bottom: 26px;
+        margin-top: 12px;
+        text-align: center;
+      }
+      #controll input {
+        width:600px;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form id='controll'>
+      <input type="text" name='url'/>
+      <button type='button' data-type='load'>追加</button>
+    </form>
+    <div id="map"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlzpSGdCTh_jOP8tCSeogSOmwvxuhD84I&callback=initMap"
+    async defer></script>
+    <script src="js/paho-mqtt-min.js"></script>
+    <script src="js/mqtt.js"></script>
+    <script src="js/controll.js"></script>
+  </body>
+</html>
