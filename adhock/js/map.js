@@ -1,5 +1,5 @@
 var map;
-var forcusesMap = {}
+var forcusesMap = []
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 32.9877777778, lng: 138.461666667},
@@ -10,29 +10,25 @@ function initMap() {
 }
 
 function setForcus(forcuses){
+  for (var i = 0; i < forcusesMap.length; i++) {
+    var marker = forcusesMap[i];
+    marker.setMap(null);
+  }
+  forcusesMap = [];
+  for (var i in forcuses) {
 
-  for(var id in forcuses){
-    var forcus = forcuses[id];
-    if(!forcusesMap[id]){
-      var markerOption =  {
-        position: {lat:parseFloat(forcus.lat),lng:parseFloat(forcus.lng)},
+    var forcus = forcuses[i];
+    var markerOption =  {
+        position: {lat:parseFloat(forcus.center.position.lat),lng:parseFloat(forcus.center.position.lng)},
         map: map
-      };
-      if(forcus.type == '台風'){
-        markerOption.icon = 'icon/typhoon.png'
-      }
-      else{
-        markerOption.label = forcus.type;
-      }
-      var marker = new google.maps.Marker(markerOption)
-      forcusesMap[id] = marker;
+    };
+    if(forcus.type == 'typhoon'){
+      markerOption.icon = 'icon/typhoon.png'
     }
     else{
-      var marker = forcusesMap[id];
-      marker.setPosition({lat:parseFloat(forcus.lat),lng:parseFloat(forcus.lng)});
-
+      markerOption.label = forcus.type;
     }
-
+    var marker = new google.maps.Marker(markerOption)
+    forcusesMap.push(marker);
   }
-
 }

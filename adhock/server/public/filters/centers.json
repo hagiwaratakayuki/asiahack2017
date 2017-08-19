@@ -1,9 +1,9 @@
 {
-	"name": "気圧の中心位置",
-	"description": "気圧の位置、台風つき",
+	"name": "pressuresystem",
+	"description": "pressuresystem width typhoon",
 	"filters": [
 		{
-			"key": "vpcy50.foctors",
+			"key": "meteorology.pressuresystem",
 			"id" : "typhoon"
 		}
 	],

@@ -56,6 +56,13 @@ Filter.prototype.execute = function(data){
   return results;
 
 }
+Filter.prototype.excuteFormat = function(key,doc,params){
+  let parsed = doc;
+  if (_.isString(parsed)) {
+    parsed = this.format.parse(data);
+  }
+  return this.format.executeFilter(key, parsed, params);
+}
 
 
 var Config = function(name, description, format){
