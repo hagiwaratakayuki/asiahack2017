@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+  <Control>
+   <Title>地上実況図</Title>
+   <DateTime>2011-12-18T02:05:13Z</DateTime>
+   <Status>通常</Status>
+   <EditorialOffice>気象庁本庁</EditorialOffice>
+   <PublishingOffice>気象庁予報部</PublishingOffice>
+  </Control>
+  <Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+    <Title>地上実況図</Title>
+    <ReportDateTime>2011-12-18T11:05:13+09:00</ReportDateTime>
+    <TargetDateTime>2011-12-18T09:00:00+09:00</TargetDateTime>
+    <EventID/>
+    <InfoType>発表</InfoType>
+    <Serial></Serial>
+    <InfoKind>天気図情報</InfoKind>
+    <InfoKindVersion>1.1_1</InfoKindVersion>
+    <Headline>
+    <Text/>
+    </Headline>
+   </Head>
+  <Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/meteorology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+    <MeteorologicalInfos type="天気図情報">
+      <MeteorologicalInfo>
+        <DateTime significant="yyyy-mm-dd">2008-03-11T00:00:00+09:00</DateTime>
+        <Item>
+         <Kind>
+           <Property>
+             <Type>台風</Type>
+              <CenterPart>
+                <jmx_eb:Coordinate type="中心位置（度）">+10.2+115.0/</jmx_eb:Coordinate>
+                <jmx_eb:Direction unit="度（真方位）" type="移動方向">270</jmx_eb:Direction>
+                <jmx_eb:Speed unit="km/h" description="２５ｋｍ/ｈ" type="移動速度">25</jmx_eb:Speed>
+                <jmx_eb:Speed unit="ノット" description="１３ＫＴ" type="移動速度">13</jmx_eb:Speed>
+                <jmx_eb:Pressure unit="hPa" type="中心気圧">1000</jmx_eb:Pressure>
+              </CenterPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>風</Type>
+              <WindSpeedPart>
+                <jmx_eb:WindSpeed unit="m/s" type="最大風速">18</jmx_eb:WindSpeed>
+                <jmx_eb:WindSpeed unit="ノット" type="最大風速">35</jmx_eb:WindSpeed>
+              </WindSpeedPart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>呼称</Type>
+              <TyphoonNamePart>
+                <Name>WASHI</Name>
+                <NameKana>ワシ</NameKana>
+                <Number>1121</Number>
+              </TyphoonNamePart>
+            </Property>
+          </Kind>
+          <Kind>
+            <Property>
+              <Type>階級</Type>
+              <ClassPart>
+                <jmx_eb:TyphoonClass type="熱帯擾乱種類">台風（ＴＳ）</jmx_eb:TyphoonClass>
+              </ClassPart>
+            </Property>
+          </Kind>
+        </Item>
+      </MeteorologicalInfo>
+    </MeteorologicalInfos>
+  </Body>
+</Report>
